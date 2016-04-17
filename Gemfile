@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Slim generator
+gem 'slim-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -22,6 +25,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Powerful components to create forms
+gem 'simple_form'
+
+gem 'activerecord', '4.2.6'
+
+gem 'rake', '11.1.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,6 +45,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '3.4.2'
+  gem 'capybara', '2.7.0'
+  gem 'selenium-webdriver', '2.53.0'
+  gem 'launchy', '2.4.3'
+  gem 'factory_girl', '4.7.0'
+  gem 'database_cleaner', '1.5.1'
+  gem 'faker', '1.6.3'
 end
 
 group :development do
@@ -43,5 +60,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'better_errors', '2.1.1'
+  gem 'binding_of_caller', '0.7.2'
+  gem 'meta_request', '0.4.0'
 end
 

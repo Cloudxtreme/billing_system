@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Person:
+  = @customer.person_id
+p
+  strong Total purchases:
+  = @customer.total_purchases
+p
+  strong Last purchase date:
+  = @customer.last_purchase_date
+p
+  strong Is active:
+  = @customer.is_active
+
+= link_to 'Edit', edit_customer_path(@customer)
+'|
+= link_to 'Back', customers_path

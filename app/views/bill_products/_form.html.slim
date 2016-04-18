@@ -1,0 +1,9 @@
+= simple_form_for(@bill_product) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :product_id
+    = f.input :bill_id
+
+  .form-actions
+    = f.button :submit

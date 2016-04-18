@@ -1,0 +1,27 @@
+h1 Listing customers
+
+table
+  thead
+    tr
+      th Person
+      th Total purchases
+      th Last purchase date
+      th Is active
+      th
+      th
+      th
+
+  tbody
+    - @customers.each do |customer|
+      tr
+        td = customer.person_id
+        td = customer.total_purchases
+        td = customer.last_purchase_date
+        td = customer.is_active
+        td = link_to 'Show', customer
+        td = link_to 'Edit', edit_customer_path(customer)
+        td = link_to 'Destroy', customer, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Customer', new_customer_path

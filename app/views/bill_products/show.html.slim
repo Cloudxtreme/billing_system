@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Product:
+  = @bill_product.product_id
+p
+  strong Bill:
+  = @bill_product.bill_id
+
+= link_to 'Edit', edit_bill_product_path(@bill_product)
+'|
+= link_to 'Back', bill_products_path

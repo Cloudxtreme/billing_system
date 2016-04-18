@@ -1,0 +1,11 @@
+= simple_form_for(@employee) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :person_id
+    = f.input :hire_date
+    = f.input :job_title
+    = f.input :salary
+
+  .form-actions
+    = f.button :submit

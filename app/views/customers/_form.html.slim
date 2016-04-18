@@ -1,0 +1,11 @@
+= simple_form_for(@customer) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :person_id
+    = f.input :total_purchases
+    = f.input :last_purchase_date
+    = f.input :is_active
+
+  .form-actions
+    = f.button :submit

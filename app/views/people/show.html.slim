@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Id number:
+  = @person.id_number
+p
+  strong First name:
+  = @person.first_name
+p
+  strong Last name:
+  = @person.last_name
+p
+  strong Gender:
+  = @person.gender
+p
+  strong Address:
+  = @person.address
+p
+  strong Gender:
+  = @person.gender
+p
+  strong Picture:
+  = @person.picture
+
+= link_to 'Edit', edit_person_path(@person)
+'|
+= link_to 'Back', people_path

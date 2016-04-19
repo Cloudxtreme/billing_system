@@ -1,10 +1,9 @@
 class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
-      t.integer :contactable_id
-      t.string :contactable_type
-      t.integer :contact_type
-      t.string :detail
+      t.references :contactable, polymorphic: true, null: false, index: true
+      t.integer :contact_type, null: false
+      t.string :detail, null: false
 
       t.timestamps null: false
     end
